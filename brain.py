@@ -10,7 +10,7 @@ prediction.setModelTypeAsDenseNet121()
 prediction.setModelPath(os.path.join(
     execution_path, "DenseNet-BC-121-32.h5"))
 prediction.loadModel()
-prediction.loadModel(prediction_speed="fast")
+print ('testing')
 predictions, probabilities = prediction.classifyImage(
     os.path.join(execution_path, "c63.jpg"), result_count=10)
 for eachPrediction, eachProbability in zip(predictions, probabilities):
